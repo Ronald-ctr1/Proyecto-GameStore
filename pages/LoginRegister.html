@@ -4,9 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Secion/Registro</title>
+    <link rel="stylesheet" href="../styles/login.css">
 </head>
 <body>
-    <main>
+    <div class="container">
+        <div class="card" id="authCard">
+            <div class="form-box login" id="loginForm">
+                <h2>welcome back</h2>
+                <div class="input-group">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 7L12 13L20 7M4 17H20V7H4V17Z"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <input type="email" class="input-field" id="loginEmail" placeholder="Email" autocomplete="email">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-linejoin="round">
+                                <path d="M8 11V7C8 4.79086 9.79086 3 12 3V4C14.2091 3 16 4.79086 16 7V11" stroke="curretColor" 
+                                stroke-linecap="round"></path>
+                        </svg>
+                    </span>
+                    <input type="password" class="input-field" id="loginPassword" placeholder="Password" autocomplete="current-password">    
+                </div>
+
+                <button class="action-btn" id="loginBtn">log in</button>
+                <p class="toggle-text" onclick="flipCard()">
+                    <span>no account? sign up -></span>
+                </p>
+            </div>
+            <div class="form-box signup" id="signupForm">
+                <h2>create account</h2>
+
+                <div class="input-group">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-linejoin="round">
+                                <path d="M5 20V19C5 15.6863 7.68629 13 11 13H13C16.3137 13 19 15.6863 19 19V20" stroke="currentColor"
+                                    stroke-linecap="round"></path>
+                            </circle>
+                        </svg>
+                    </span>
+                    <input class="input-field" placeholder="Full name">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none" >
+                            <path d="M4 7L12 13L20 7M4 17H20V7H4V17Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <input class="input-field" placeholder="Email">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor">
+                                <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="currentColor"></path>
+                            </rect>
+                        </svg>
+                    </span>
+                    <input class="input-field" placeholder="Password">
+                </div>
+                <button class="action-btn" id="signupBtn">sign up</button>
+
+            <p class="toggle-text" onclick="flipCard()">
+                <span><- already have account? lon in </span>
+            </p>
+            
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script>
+        (function () {
+            "use strict";
+            window.flipCard = function () {
+                const card = document.getElementById ("authCard");
+                card.classList.toggle("flip");
+            };
+        })();
+    </script>
+
+</body>
+</html>
+<!--<main>
     <form action="" >
         Nombre de Usuario:<input type="text"><br>
         Correo: <input type="email"><br>
@@ -16,6 +105,4 @@
 
         <input type="submit" value="Registrar">
     </form>
-    </main>
-</body>
-</html>
+    </main>-->
